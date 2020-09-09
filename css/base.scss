@@ -1,0 +1,322 @@
+:root {
+  font-size: 10px;
+  line-height: 1.5;
+  font-family: 'Cabin', sans-serif;
+}
+
+@font-face {
+  font-family: materialdesignicons;
+  src: url(../font/materialdesignicons-webfont.woff2);
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: inherit;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: unset;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+
+p {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+a.icon {
+  transition: .3s all ease;
+}
+
+[class*=fa-]::before {
+  font-weight: 400;
+  font-family: FontAwesome;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// icon font material
+.mdi {
+  display: inline-block;
+  font-weight: 400;
+  font-style: normal;
+  font-family: materialdesignicons;
+  // font-family: Material Design Icons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0,0);
+
+  &-arrow-right::before {
+    content: "\f14f";
+  }
+
+  &-chevron-up:before {
+    content: "\f239";
+  }
+
+  &-basket:before {
+    content: "\f16d";
+  }
+
+  &-airplane:before {
+    content: "\f11c";
+  }
+
+  &-airplane:before {
+    content: "\f11c";
+  }
+
+  &-bell-outline:before {
+    content: "\f193";
+  }
+
+  &-battery-charging:before {
+    content: "\f17b";
+  }
+
+  &-cash-multiple:before {
+    content: "\f20c";
+  }
+
+  &-car-connected:before {
+    content: "\f203";
+  }
+
+  &-close:before {
+    content: "\f24c";
+  }
+
+  &-check:before {
+    content: "\f222";
+  }
+
+  &-email:before {
+    content: "\f2e3";
+  }
+}
+
+// icon social FontAwesome
+.icon {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 5.6rem;
+  font-style: normal;
+
+  &-circle {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    line-height: 70px;
+    text-align: center;
+    border: 2px solid;
+  }
+
+  &-primary {
+    color: $color-primary;
+    border-color: $color-gray-light;
+  }
+  
+  &-xxs {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+
+  &-lg {
+    width: 80px;
+    height: 80px;
+    line-height: 8rem;
+    font-size: 3.6rem;
+  }
+
+  &:before {
+    display: inline-block;
+    position: relative;
+}
+}
+
+.icon.mdi-bell-outline:before, .icon.mdi-airplane:before {
+  margin-left: 3px;
+}
+
+// button 
+.btn {
+  position: relative;
+  padding: 9px 16px;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  border-width: 2px;
+  transition: .3s;
+  backface-visibility: hidden;
+  font-weight: 700;
+  min-width: 180px; 
+
+  // button primary
+  &-primary {
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  // button default
+  &-default {
+    color: $color-primary;
+    background-color: transparent;
+    border-color: $color-primary;
+  }
+
+  &.btn-icon {
+    padding-left: 17px;
+    padding-right: 17px;
+    & .icon {
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+      vertical-align: middle;
+      transition: 0s;
+    }
+  }
+
+  &.btn-icon-left .icon {
+    float: left;
+    padding-right: 10px;
+  }
+
+  &-sm,
+  &-group-sm > .btn {
+    padding: 7px 35px;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    border-radius: 3px;
+    border-width: 1px;
+    padding-top: 8px;
+
+    &.btn-icon, .btn-group-sm > .btn-icon.btn {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
+
+  &-sm.btn-icon .icon,
+  &-group-sm > .btn-icon.btn .icon {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  &-sm.btn-icon-left .icon,
+  &-group-sm > .btn-icon-left.btn .icon {
+    padding-right: 8px;
+  }
+}
+
+// btn primary
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:hover, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open > .btn-primary.dropdown-toggle {
+  color: $color-white;
+  background-color: $color-primary-dark;
+  border-color: $color-primary-dark;
+}
+
+.btn-default:focus,
+.btn-default.focus, 
+.btn-default:hover, 
+.btn-default:active, 
+.btn-default.active, 
+.open > .btn-default.dropdown-toggle {
+  color: $color-white;
+  background-color: $color-primary;
+  border-color: $color-primary;
+}
+
+.text-color-gray {
+  color: $color-gray;
+}
+
+.text-color-gray-dark {
+  color: $color-gray-dark;
+}
+
+.text-color-white {
+  color: $color-white;
+}
+
+.title-primary {
+  line-height: 1.2;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
+
+.title-primary+h6 {
+  margin-top: 29px;
+  margin-bottom: 18px;
+}
+
+.title-secondary {
+  line-height: 1.25;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+// unit block
+.unit {
+  text-align: left;
+  display: flex;
+  &-icon {
+
+  }
+
+  &-body {
+    margin-left: 15px;
+    &__title {
+      line-height: 1.25;
+      font-size: 2.4rem;
+      font-weight: 700
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
